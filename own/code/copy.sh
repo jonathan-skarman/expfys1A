@@ -1,0 +1,10 @@
+sshpass -p "6^rh0NZ7*wB&vAl7" scp nissov@remote11.chalmers.se:~/Documents/Measurement25.tsv /home/jonathan/Documents/GitHub/expfys1A/own/raw_data/
+sshpass -p "6^rh0NZ7*wB&vAl7" scp nissov@remote11.chalmers.se:~/Documents/Measurement27.tsv /home/jonathan/Documents/GitHub/expfys1A/own/raw_data/
+sshpass -p "6^rh0NZ7*wB&vAl7" scp nissov@remote11.chalmers.se:~/Documents/Measurement39.tsv /home/jonathan/Documents/GitHub/expfys1A/own/raw_data/
+sshpass -p "6^rh0NZ7*wB&vAl7" scp nissov@remote11.chalmers.se:~/Documents/Measurement63.tsv /home/jonathan/Documents/GitHub/expfys1A/own/raw_data/
+sshpass -p "6^rh0NZ7*wB&vAl7" scp nissov@remote11.chalmers.se:~/Documents/Measurement65.tsv /home/jonathan/Documents/GitHub/expfys1A/own/raw_data/
+sshpass -p "6^rh0NZ7*wB&vAl7" scp nissov@remote11.chalmers.se:~/Documents/Measurement73.tsv /home/jonathan/Documents/GitHub/expfys1A/own/raw_data/
+sshpass -p "6^rh0NZ7*wB&vAl7" scp nissov@remote11.chalmers.se:~/Documents/Measurement85.tsv /home/jonathan/Documents/GitHub/expfys1A/own/raw_data/
+sshpass -p "6^rh0NZ7*wB&vAl7" scp nissov@remote11.chalmers.se:~/Documents/Measurement105.tsv /home/jonathan/Documents/GitHub/expfys1A/own/raw_data/
+sshpass -p "6^rh0NZ7*wB&vAl7" scp nissov@remote11.chalmers.se:~/Documents/Measurement107.tsv /home/jonathan/Documents/GitHub/expfys1A/own/raw_data/
+sshpass -p "6^rh0NZ7*wB&vAl7" scp nissov@remote11.chalmers.se:~/Documents/Measurement111.tsv /home/jonathan/Documents/GitHub/expfys1A/own/raw_data/
