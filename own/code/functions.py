@@ -73,20 +73,21 @@ class parser:
 		self.start1, self.stop1 = find_start_and_stop(self, self.pos1)
 		self.start2, self.stop2 = find_start_and_stop(self, self.pos2)
 
-		def find_impact(self, pos):
-			v = np.diff(pos, axis=0) / self.dt
+		def find_impact(self, pos, start, stop):
+			v = np.diff(pos[start:stop], axis=0) / self.dt
 
 			a = np.diff(v, axis=0) / self.dt
 
 			a_belopp = np.linalg.norm(a, axis=1)
 
-			plt.plot(self.time[1:-1], a_belopp)
-			plt.show()
+			#plt.plot(self.time[1:-1], a_belopp)
+			#plt.show()
 
 			max_a_indx = np.argmax(a_belopp)
 
 			return max_a_indx-self.offset, max_a_indx + 2 + self.offset
-		self.impact_start, self.impact_stopp = find_impact(self, self.pos2)
+		self.impact_start, self.impact_stopp = find_impact(self, self.pos1, self.start1, self.stop1)
+		print(self.start1, self.impact_start, self.impact_stopp, self.stop1)
 
 		#polynomial fit längs alla 3 dimensioner. använd p_x.deriv()
 		def fit(self, pos, indx_start = 0, indx_stopp = None, deg = 2, dimension = 2):
@@ -105,7 +106,6 @@ class parser:
 			self.resid += resid[0][0]
 
 			return p_x, p_y, p_z
-		print(self.start1, self.impact_start, self.impact_stopp, self.stop1)
 		self.pos1xbefore, self.pos1ybefore, self.pos1zbefore = fit(self, self.pos1, indx_start = self.start1, indx_stopp = self.impact_start, deg = 2)
 		self.pos2xbefore, self.pos2ybefore, self.pos2zbefore = fit(self, self.pos2, indx_start = self.start2, indx_stopp = self.impact_start, deg = 2)
 		self.pos1xafter, self.pos1yafter, self.pos1zafter = fit(self, self.pos1, indx_start = self.impact_stopp, indx_stopp = self.stop1, deg = 2)
