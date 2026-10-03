@@ -73,8 +73,8 @@ class parser:
 		self.start1, self.stop1 = find_start_and_stop(self, self.pos1)
 		self.start2, self.stop2 = find_start_and_stop(self, self.pos2)
 
-		def find_impact(self, pos, start, stop):
-			v = np.diff(pos[:,start:stop], axis=0) / self.dt
+		def find_impact(self, pos):
+			v = np.diff(pos, axis=0) / self.dt
 
 			a = np.diff(v, axis=0) / self.dt
 
@@ -86,7 +86,7 @@ class parser:
 			max_a_indx = np.argmax(a_belopp)
 
 			return max_a_indx-self.offset, max_a_indx + 2 + self.offset
-		self.impact_start, self.impact_stopp = find_impact(self, self.pos1, self.start1, self.stop1)
+		self.impact_start, self.impact_stopp = find_impact(self, self.pos2)
 
 		#polynomial fit längs alla 3 dimensioner. använd p_x.deriv()
 		def fit(self, pos, indx_start = 0, indx_stopp = None, deg = 2, dimension = 2):

@@ -6,7 +6,7 @@ import scipy as sp
 
 # m1 är massan längst vänster (initialt)
 # m2 är massan längst höger (initialt)
-test = functions.parser(filename = "own/raw_data/Measurement111.tsv", m1 = 1.0, m2 = 1.0, fps = 100, testnr = 0, offset = 5, headers = 10, rotation = False)
+test = functions.parser(filename = "own/raw_data/daniel.tsv", m1 = 1.0, m2 = 1.0, fps = 100, testnr = 0, offset = 5, headers = 10, rotation = False)
 plt.subplot(4, 2, 1)
 plt.plot(test.time[:test.impact_start], test.pos1xbefore(test.time)[:test.impact_start], label = "pos1xbefore")
 plt.plot(test.time[test.impact_stopp:], test.pos1xafter(test.time)[test.impact_stopp:], label = "pos1xafter")
