@@ -1,3 +1,0 @@
-TODO:
-  add a function that finds where to start different measurements (and ends), AKA remove the onces that are fully 0 across XYZ
-    do per particle to make sure best fit per particle
